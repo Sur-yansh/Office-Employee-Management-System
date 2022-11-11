@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block title %}Remove Employee
+{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <h2>Remove Employee Detailed!</h2>
+    <hr>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Choose Employee To Be Removed
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {% for emp in emps %}
+          <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
+          {% endfor %}
+          
+        </ul>
+      </div>
+{% endblock body %}
+    
